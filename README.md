@@ -41,3 +41,5 @@ will prove useful when moving forward to production ready API state
     4. Extension methods for versioning, swagger and JWT authentication
     5. Redis-ETag cache helper 
   
+###### What next
+I will add more stuff in it like using some enterprise service bus, docker deployments, CQRS, Event sourcing and etc. let me know if you feel like adding some cool stuff in it
