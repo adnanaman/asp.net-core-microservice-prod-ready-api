@@ -8,7 +8,7 @@ Services used:
   4. Add versioning 
   5. Added Swagger support
   6. Repository (json based database file) 
-      - some English monarchs dummy data (preparing for life in the uk test now a days, so its on top of my head all the time)
+      - some English monarchs tenures data (preparing for life in the uk test now a days, so monarchy is on top of my head all the time)
  
 Middleware used:
   1. Error handling middleware 
