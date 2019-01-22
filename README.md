@@ -1,5 +1,9 @@
 # asp.net-core-microservice-prod-ready-api
-asp.net core web API - micro service and starter project for REST based web service. Optimised for performance and used best practices
+I wrote yet another asp.net boiler plate code considering the best practices in mind to achieve optimal performance.
+
+Some of the middleware or services used within the code may initially seem unnecessary but
+
+will prove useful when moving forward to production ready API state
 
 ###### Services:
   1. Json web token (JWT) 
