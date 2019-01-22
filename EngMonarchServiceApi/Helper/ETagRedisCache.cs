@@ -48,14 +48,15 @@ namespace EngMonarchApi
             }
 
             string requestETag = GetRequestedETag();
-            string responseETag = Convert.ToBase64String(Encoding.ASCII.GetBytes(objectToCache.Page.ToString()));
+            string responseETag = Convert.ToBase64String(Encoding.ASCII.GetBytes(objectToCache.Page?.ToString()));
 
-            // Add the contact to the cache for 30 mins if not already in the cache
+            // Add to the cache for 30 mins if not already in the cache
             if (objectToCache != null && responseETag != null)
             {
                 string cacheKey = $"{cacheKeyPrefix}-{responseETag}";
                 string serializedObjectToCache = JsonConvert.SerializeObject(objectToCache);
-                _cache.SetString(cacheKey, serializedObjectToCache, new DistributedCacheEntryOptions() { AbsoluteExpiration = DateTime.Now.AddMinutes(30) });
+                _cache.SetString(cacheKey, serializedObjectToCache, new DistributedCacheEntryOptions() {
+                    AbsoluteExpiration = DateTime.Now.AddMinutes(30) });
             }
 
             // Add the current ETag to the HTTP header

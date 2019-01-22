@@ -64,7 +64,7 @@ namespace EngMonarchApi
             var problem = new ProblemDetails
             {
                 Type = "https://yourdomain.com/errors/internal-server-error",
-                Title = exception.Message,
+                Title = exception?.Message,
                 Detail = errors?.ToString() ?? exception.Message,
                 Instance = "",
                 Status = (int)code
