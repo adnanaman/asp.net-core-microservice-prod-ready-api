@@ -28,11 +28,9 @@ Middleware:
   5. Health checks
       - asp.net core offers built in health checks libraries 
   6. Seri Logger File Rolling
-      - .net core comes with built in logger but thats very limited, I used SeriLog library as its faster than others like NLog and Log4net
-      and provides structured logs. logging is backbone of any production based APIs so has to be very careful with that what you choose.
-  
-  
-  Best practices:
+      - .net core comes with built in logger but thats very limited, I used SeriLog library as its faster than others like NLog and             Log4net and provides structured logs. logging is backbone of any production based APIs so has to be very careful with that what         you choose.
+    
+ Best practices:
     1. Dependency Injection
     2. Async actions optimized to use max processor threads
     3. Middleware to handle request of ErrorHandling, ETag, Limiting requests 
