@@ -1,7 +1,7 @@
 # asp.net-core-microservice-prod-ready-api
 asp.net core web API - micro service and starter project for REST based web service. Optimised for performance and used best practices
 
-######Services:
+###### Services:
   1. Json web token (JWT) 
       - To do the authorization based on tokens, clients can generate tokens, some operations are admin based so for that has to 
       create admin based token. It includes TokenGenerator, which shouldn't be part of it but for ease purpose i included. 
@@ -16,7 +16,7 @@ asp.net core web API - micro service and starter project for REST based web serv
   6. Repository (json based database file) 
       - some English monarchs tenures data (preparing for life in the uk test now a days, so monarchy is on top of my head all the time)
  
-######Middleware:
+###### Middleware:
   1. Error handling middleware
       - Handle exception handling by logging problems only
   2. Response Compression 
@@ -30,7 +30,7 @@ asp.net core web API - micro service and starter project for REST based web serv
   6. Seri Logger File Rolling
       - .net core comes with built in logger but thats very limited, I used SeriLog library as its faster than others like NLog and             Log4net and provides structured logs. logging is backbone of any production based APIs so has to be very careful with that what         you choose.
     
- ######Best practices: 
+ ###### Best practices: 
     1. Dependency Injection
     2. Async actions optimized to use max processor threads
     3. Middleware to handle request of ErrorHandling, ETag, Limiting requests 
