@@ -35,11 +35,17 @@ will prove useful when moving forward to production ready API state
       - .net core comes with built in logger but thats very limited, I used SeriLog library as its faster than others like NLog and             Log4net and provides structured logs. logging is backbone of any production based APIs so has to be very careful with that what         you choose.
     
  ###### Best practices: 
-    1. Dependency Injection
-    2. Async actions optimized to use max processor threads
+    1. Used service extension methods to enhance readability of code specially in Startup.cs
+    2. Used DI/IOC to register DAL based classes as service and utilized .net core IOC feature, so does ILogger and others
+    3. Async actions optimized to use max processor threads
     3. Middleware to handle request of ErrorHandling, ETag, Limiting requests 
     4. Extension methods for versioning, swagger and JWT authentication
     5. Redis-ETag cache helper 
+    6. ApiConventionType .net core 2.2 feature which analyzes controller for differnt status code and help swagger like tool to generate
+    7. Global error handling
+    8. Attribute based Routing
+    9. Ilogger /Serilog
+    10. Using JWT to add authentication tokens to avoid unauthorized requests
   
 ###### What next
 I will add more stuff in it like using some enterprise service bus, docker deployments, CQRS, Event sourcing and etc. let me know if you feel like adding some cool stuff in it
